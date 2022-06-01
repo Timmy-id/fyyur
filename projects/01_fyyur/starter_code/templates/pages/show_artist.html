@@ -40,7 +40,7 @@
 		{% endif %}
 	</div>
 	<div class="col-sm-6">
-		<img src="{{ artist.image_link }}" alt="Venue Image" />
+		<img src="{{ artist.image_link }}" alt="{{ artist.name }}'s image" />
 	</div>
 </div>
 <section>
@@ -73,6 +73,28 @@
 </section>
 
 <a href="/artists/{{ artist.id }}/edit"><button class="btn btn-primary btn-lg">Edit</button></a>
+<button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#deleteModal">Delete</button></a>
 
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="deleteModalLabel">Are you sure you want to delete the artist?</h4>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<a href="{{ url_for('delete_artist', artist_id=artist.id) }}">
+						<button class="btn btn-danger">Delete
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}
 
