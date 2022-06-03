@@ -6,7 +6,7 @@ import logging
 from logging import Formatter, FileHandler
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from fyyur.config import DatabaseURI
+from fyyur.config import Config
 
 
 db = SQLAlchemy()
@@ -16,7 +16,7 @@ migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_object(DatabaseURI)
+    app.config.from_object(Config)
 
     db.init_app(app)
     moment.init_app(app)

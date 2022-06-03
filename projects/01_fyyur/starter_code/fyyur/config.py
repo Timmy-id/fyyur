@@ -1,6 +1,6 @@
 import os
 
-class DatabaseURI:
+class Config:
     SECRET_KEY = os.urandom(32)
     DATABASE_NAME = 'fyyur'
     username = 'postgres'
