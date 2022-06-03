@@ -1,1 +1,811 @@
 
+2022-06-02 12:47:19,990 INFO: errors [in app.py:406]
+2022-06-02 12:47:30,530 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x0000022B38E991A0 (otid=0x0000022B38E96B80) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 65, in index
+    venues = Venue.query.order_by(Venue.id.desc()).limit(10).all()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 12:54:03,149 INFO: errors [in app.py:406]
+2022-06-02 12:54:09,399 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x000001B563A0A1A0 (otid=0x000001B563A077C0) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 65, in index
+    venues = Venue.query.order_by(Venue.id.desc()).limit(10).all()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 13:12:15,983 INFO: errors [in app.py:406]
+2022-06-02 13:12:25,827 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x000001E302834040 (otid=0x000001E3028305C0) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 65, in index
+    venues = Venue.query.order_by(Venue.id.desc()).limit(10).all()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 13:15:36,739 INFO: errors [in app.py:406]
+2022-06-02 13:15:45,405 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x000002115A0C1E00 (otid=0x000002115A0C0480) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 65, in index
+    venues = Venue.query.order_by(Venue.id.desc()).limit(10).all()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 13:20:42,475 INFO: errors [in app.py:406]
+2022-06-02 13:20:51,048 ERROR: Exception on /venues/1 [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x000001F60DAFFF60 (otid=0x000001F60DAFE7C0) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\venue.py", line 160, in show_venue
+    venue = Venue.query.get_or_404(venue_id)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 13:25:19,604 INFO: errors [in app.py:406]
+2022-06-02 13:25:31,976 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x0000027A9BF15040 (otid=0x0000027A9BF11EC0) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 65, in index
+    venues = Venue.query.order_by(Venue.id.desc()).limit(10).all()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 13:34:37,947 INFO: errors [in app.py:399]
+2022-06-02 13:34:44,570 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x0000025CEF7647D0 (otid=0x0000025CEF763340) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\index.py", line 12, in index
+    venues = Venue.query.order_by(Venue.id.desc()).limit(10).all()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 16:33:39,547 INFO: errors [in app.py:399]
+2022-06-02 16:34:32,801 INFO: errors [in app.py:399]
+2022-06-02 16:34:36,688 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x00000267D1562720 (otid=0x00000267D1561200) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\index.py", line 12, in index
+    venues = Venue.query.order_by(Venue.id.desc()).limit(10).all()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 16:56:15,235 INFO: errors [in app.py:399]
+2022-06-02 16:56:42,764 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x000001A264B26930 (otid=0x000001A264B25840) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\index.py", line 12, in index
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 21:23:28,695 INFO: errors [in app.py:399]
+2022-06-02 21:24:49,502 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x0000025712786880 (otid=0x00000257127851C0) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\home.py", line 12, in index
+    venues = Venue.query.order_by(Venue.id.desc()).limit(10).all()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 21:26:09,539 INFO: errors [in app.py:399]
+2022-06-02 21:26:14,620 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x00000281F90B27D0 (otid=0x00000281F90B11C0) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\home.py", line 12, in index
+    venues = Venue.query.order_by(Venue.id.desc()).limit(10).all()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\orm\session.py", line 4209, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 594, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 1027, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\engine\url.py", line 661, in _get_entrypoint
+    cls = registry.load(name)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-06-02 21:26:48,877 INFO: errors [in app.py:399]
+2022-06-02 21:26:54,064 ERROR: Exception on / [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\home.py", line 15, in index
+    return render_template('pages/home.html', venues=venues, artists=artists)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\pages\home.html", line 9, in template
+    <a href="{{ url_for('venues.all_venues', areas=all_data)"><button class="btn btn-primary btn-lg">Find a venue</button></a>
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'string'
+2022-06-02 21:28:07,232 INFO: errors [in app.py:399]
+2022-06-02 21:28:18,633 ERROR: Exception on /venues/ [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\venue.py", line 117, in all_venues
+    return render_template('pages/venues.html', areas=all_data)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\pages\venues.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\pages\venues.html", line 11, in block 'content'
+    <a href="{{ url_for('venues.venue.id', venue=venue) }}">
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\werkzeug\routing.py", line 2301, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'venues.venue.id' with values ['venue']. Did you mean 'venues.all_venues' instead?
+2022-06-02 21:29:29,824 INFO: errors [in app.py:399]
+2022-06-02 21:29:36,944 ERROR: Exception on /venues/ [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\venue.py", line 117, in all_venues
+    return render_template('pages/venues.html', areas=all_data)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\pages\venues.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\pages\venues.html", line 11, in block 'content'
+    <a href="{{ url_for('venue.id', venue=venue) }}">
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\werkzeug\routing.py", line 2301, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'venue.id' with values ['venue']. Did you mean 'venues.edit_venue' instead?
+2022-06-02 21:37:16,164 ERROR: Exception on /artists/2/edit [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 233, in edit_artist
+    form = ArtistForm()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_wtf\form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_wtf\csrf.py", line 147, in generate_csrf_token
+    return generate_csrf(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_wtf\csrf.py", line 36, in generate_csrf
+    secret_key = _get_config(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_wtf\csrf.py", line 136, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-02 21:40:41,066 INFO: errors [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\app.py:399]
+2022-06-02 21:40:50,589 ERROR: Exception on /artists/6/edit [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\app.py", line 233, in edit_artist
+    form = ArtistForm()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_wtf\form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\csrf\core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_wtf\csrf.py", line 147, in generate_csrf_token
+    return generate_csrf(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_wtf\csrf.py", line 36, in generate_csrf
+    secret_key = _get_config(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_wtf\csrf.py", line 136, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-02 21:43:07,808 INFO: errors [in app.py:399]
+2022-06-02 21:43:50,137 ERROR: Exception on /venues/6/edit [POST] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\venue.py", line 238, in edit_venue_submission
+    if form.validate_on_submit():
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask_wtf\form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\form.py", line 329, in validate
+    return super().validate(extra)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\form.py", line 146, in validate
+    if not field.validate(self, extra):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\fields\core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\wtforms\fields\core.py", line 262, in _run_validation_chain
+    validator(form, self)
+TypeError: validate_phone() takes 1 positional argument but 2 were given
+2022-06-02 21:46:51,629 INFO: errors [in app.py:399]
+2022-06-02 21:46:55,495 ERROR: Exception on /venues/ [GET] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\venue.py", line 117, in all_venues
+    return render_template('pages/venues.html', areas=all_data)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\pages\venues.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\templates\pages\venues.html", line 11, in block 'content'
+    <a href="{{ url_for('venue.id', venue=venue) }}">
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\helpers.py", line 325, in url_for
+    rv = url_adapter.build(
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\werkzeug\routing.py", line 2301, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'venue.id' with values ['venue']. Did you mean 'venues.edit_venue' instead?
+2022-06-02 21:47:17,195 ERROR: Exception on /venues/6/edit [POST] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1538, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'venues.edit_venue_submission' did not return a valid response. The function either returned None or ended without a return statement.
+2022-06-02 21:49:58,405 ERROR: Exception on /venues/6/edit [POST] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1538, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'venues.edit_venue_submission' did not return a valid response. The function either returned None or ended without a return statement.
+2022-06-02 21:55:08,190 INFO: errors [in app.py:399]
+2022-06-02 21:55:22,517 ERROR: Exception on /venues/6/edit [POST] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\venue.py", line 268, in edit_venue_submission
+    return render_template('forms/edit_venue.html', form=form, venue=venue)
+UnboundLocalError: local variable 'venue' referenced before assignment
+2022-06-02 21:56:31,264 ERROR: Exception on /venues/6/edit [POST] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\venue.py", line 268, in edit_venue_submission
+    return render_template('errors/500.html', form=form, venue=venue)
+UnboundLocalError: local variable 'venue' referenced before assignment
+2022-06-02 21:57:24,922 ERROR: Exception on /venues/6/edit [POST] [in C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\env\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Oluwatimilehin\Desktop\FSND\projects\01_fyyur\starter_code\views\venue.py", line 268, in edit_venue_submission
+    return render_template('errors/500.html')
+UnboundLocalError: local variable 'venue' referenced before assignment
+2022-06-02 22:07:07,061 INFO: errors [in app.py:399]
+2022-06-02 22:09:12,726 INFO: errors [in app.py:399]
+2022-06-02 22:10:18,868 INFO: errors [in app.py:399]
+2022-06-02 22:12:50,712 INFO: errors [in app.py:399]
+2022-06-02 22:15:25,190 INFO: errors [in app.py:399]

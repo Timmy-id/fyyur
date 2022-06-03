@@ -2,12 +2,12 @@ from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import String
 from sqlalchemy.dialects.postgresql import ARRAY
-
-db = SQLAlchemy()
+from fyyur import db
 
 #----------------------------------------------------------------------------#
 # Models.
 #----------------------------------------------------------------------------#
+
 
 # Venue Model
 class Venue(db.Model):
@@ -31,14 +31,8 @@ class Venue(db.Model):
     def __repr__(self):
         return f'<Venue ID: {self.id}, name: {self.name}>'
 
-    # TODO: implement any missing fields, as a database migration using Flask-Migrate
 
-    # TODO: implement any missing fields, as a database migration using Flask-Migrate
-
-# TODO Implement Show and Artist models, and complete all model relationships and properties, as a database migration.
 # Artist Model
-
-
 class Artist(db.Model):
     __tablename__ = 'Artist'
 
