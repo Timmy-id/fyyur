@@ -11,6 +11,8 @@ This app is connected to an API created with Python Flask connected to a Postgre
 * searching for venues and artists.
 * learning more about a specific artist or venue.
 
+NB: This is one of my projects in the Udacity Full Stack Developer Nanodegree Program
+
 ## Tech Stack (Dependencies)
 
 ### 1. Backend Dependencies
